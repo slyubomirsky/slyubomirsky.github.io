@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            html {
+                font-family: "Palatino Linotype", Palatino, serif;
+            }
+            body {
+                background-image: url("bg.jpg");
+                
+            }
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            h1 { 
+                margin: 0px; 
+            }
+            .title {
+                text-align: center;
+            }
+            .content { 
+                margin: auto; 
+                border: 1px solid black;
+                width: 70%;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+            .image { 
+                padding: 4px;
+                float : right;
+                object-fit: contain;
+            }
+            .attribution {
+                text-align: center;
+                font-size: 50%;
+            }
+            #contact {
+                font-size: 14px;
+                font-family: "Lucida Console", Monaco, monospace;
+            }
+        </style>
+        <title>Steven S. Lyubomirsky</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">
+                <h1>Steven S. Lyubomirsky</h1>
+                <h2 id="contact">sslyu (at) cs.washington.edu</h2>
+            </div>
+            <div class="bio">
+                <div class="image"><img src="pic.jpg" text="Taken on my last day as an undergrad at Princeton. A rare Whitman College hat on display." /></div>
+                <div class="biotext">    
+                    <p>I have recently defended my dissertation at the University of Washington, which I completed under the supervision of <a href="https://homes.cs.washington.edu/~ztatlock/">Prof. Zachary Tatlock</a> in the <a href="https://uwplse.org">Programming Languages and Software Engineering</a> group. I will soon begin work as a Senior Machine Learning Systems Engineer at <a href="https://octoml.ai">OctoML</a>.</p>
+
+                    <p>I am broadly interested in compilers and tools related to compilers, such as in producing tools to enable new kinds of programming, including tools built on proof assistants and SMT solvers to develop programs with proven correctness properties and compilers for domain-specific languages that better encode expert knowledge to achieve greater performance and expressiveness.</p>
+
+                    <p>During my graduate studies, I did research with the <a href="http://sampl.cs.washington.edu/">SAMPL</a> group, which is an interdisciplinary research group holistically exploring problems spanning the machine learning stack. I worked on projects related to <a href="https://sampl.cs.washington.edu/projects/relay.html">TVM Relay</a>, whose purpose is to enable new abstractions and optimizations in machine-learning frameworks by providing an expressive intermediate representation and new compilation pipeline for TVM, for which I am a committer.</p>
+
+                    <p>I also previously worked on the <a href="http://bagpipe.uwplse.org/">Bagpipe project</a>, for verifying BGP configurations. An offshoot of the Bagpipe project is the <a href="https://opam.ocaml.org/packages/space-search/">SpaceSearch library</a>, allowing for reasoning about the reduction of a problem to SMT in Coq and then extracting the proof of correctness to a solver-aided tool in Rosette.</p>
+
+                    <p>During my graduate studies, I came to be associated with a certain doctrine for managing research projects, which I have modestly named after myself: <a href="lex.html"><em>lex Lyubomiricus</em></a>.
+
+                    <p>I am <em>not</em> a member of the PLSE running club, <a href="http://raceconditionrunning.com/">Race Condition Running</a>. I am, however, the only member of the Mutual Exclusion Walking Association. Its membership is very exclusive. In fact, no one can join because the waiting list is deadlocked.</p>
+                </div>
+            </div>
+            <div class="publications">
+                <h2>Publications</h2>
+                <h3>Dissertation</h3>
+                <p>Compiler and Runtime Techniques for Optimizing Deep Learning Applications. 2022. Reading Committee: Zachary Tatlock (chair), Luis Ceze, and Kevin Jamieson. <a href="dissertation.pdf">PDF</a>. <a href="https://www.youtube.com/watch?v=Pf5iWmSAADA">Defense (public session)</a>.</p>
+
+                <h3>Conference Papers</h3>
+                <p>Marisa Kirisame*, <strong>Steven Lyubomirsky</strong>*, Altan Haan*, Jennifer Brennan, Mike He, Jared Roesch, Tianqi Chen, and Zachary Tatlock. 2021.
+                Dynamic Tensor Rematerialization. <a href="https://openreview.net/forum?id=Vfs_2RnOD0H">ICLR 2021 (spotlight).</a> <a href="http://arxiv.org/abs/2006.09616">ArXiv link.</a> <a href="https://www.youtube.com/watch?v=S9KJ37Sx2XY">Recorded talk.</a> <a href="https://iclr.cc/virtual/2021/spotlight/3533">Conference page.</a> (*Equal contribution.)</p>
+                <p>Konstantin Weitz, <strong>Steven Lyubomirsky</strong>, Stefan Heule, Emina Torlak, Michael D. Ernst, and Zachary Tatlock. 2017. SpaceSearch: a library for building and verifying solver-aided tools. Proc. ACM Program. Lang. 1, ICFP, Article 25 (August 2017), 28 pages. DOI: <a href="https://doi.org/10.1145/3110269">https://doi.org/10.1145/3110269</a></p>
+                <h3>Workshop Papers</h3>
+                <p>Gus Henry Smith, Andrew Liu, <strong>Steven Lyubomirsky</strong>, Scott Davidson, Joseph McMahan, Michael Taylor, Luis Ceze, and Zachary Tatlock. 2021. Pure Tensor Program Rewriting via Access Patterns (Representation Pearl). In Proceedings of the 5th ACM SIGPLAN International Symposium on Machine Programming (<a href="https://pldi21.sigplan.org/home/maps-2021">MAPS 2021</a>). Association for Computing Machinery, New York, NY, USA, 21–31. DOI: <a href="https://doi.org/10.1145/3460945.3464953">https://doi.org/10.1145/3460945.3464953</a>. ArXiv: <a href="https://arxiv.org/abs/2105.09377">https://arxiv.org/abs/2105.09377</a>.</p>
+                <p>Bo-Yuan Huang*, <strong>Steven Lyubomirsky</strong>*, Thierry Tambe*, Yi Li, Mike He, Gus Smith, Gu-Yeon Wei, Aarti Gupta, Sharad Malik, and Zachary Tatlock. 2021. From DSLs to Accelerator-Rich Platform Implementations: Addressing the Mapping Gap. <a href="https://capra.cs.cornell.edu/latte21/">LATTE '21 (ASPLOS Workshop)</a>. <a href="https://capra.cs.cornell.edu/latte21/paper/30.pdf">https://capra.cs.cornell.edu/latte21/paper/30.pdf</a>. <a href="https://www.youtube.com/watch?v=2U7RAeOzssA">Recorded talk</a>. (*Equal contribution.)</p>
+                <p>Jared Roesch, <strong>Steven Lyubomirsky</strong>, Logan Weber, Josh Pollock, Marisa Kirisame, Tianqi Chen, and Zachary Tatlock. 2018. Relay: a new IR for machine learning frameworks. In Proceedings of the 2nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages (MAPL 2018). ACM, New York, NY, USA, 58-68. DOI: <a href="https://doi.org/10.1145/3211346.3211348">https://dl.acm.org/citation.cfm?doid=3211346.3211348</a></p>
+                <h3>Preprints</h3>
+                <p>Bo-Yuan Huang*, <strong>Steven Lyubomirsky</strong>*, Yi Li, Mike He, Thierry Tambe, Gus Henry Smith, Akash Gaonkar, Vishal Canumalla, Gu-Yeon Wei, Aarti Gupta, Zachary Tatlock, and Sharad Malik. 2022. Specialized Accelerators and Compiler Flows: Replacing Accelerator APIs with a Formal Software/Hardware Interface. ArXiv:2203.00218 [cs.Ar], arXiv.org, <a href="">https://arxiv.org/abs/2203.00218</a>. (*Equal contribution.)</p>
+                <p>Jared Roesch, <strong>Steven Lyubomirsky</strong>, Marisa Kirisame, Logan Weber, Josh Pollock, Luis Vega, Ziheng Jiang, Tianqi Chen, Thierry Moreau, and Zachary Tatlock. 2019. Relay: A High-Level Compiler for Deep Learning. ArXiv:1904.08368 [Cs, Stat], arXiv.org, <a href="http://arxiv.org/abs/1904.08368">http://arxiv.org/abs/1904.08368</a>.</p>
+            </div>
+            <div class="service">
+                <h2>Academic Service</h2>
+                <ul>
+                    <li>External manuscript reviewer, <a href="https://dl.acm.org/journal/taco">ACM TACO</a> (May 2021)</li>
+                    <li><a href="https://popl21.sigplan.org/committee/POPL-2021-artifact-evaluation-artifact-evaluation-committee">POPL 2021 Artifact Evaluation Committee</a></li>
+                </ul>
+            </div>
+            <div class="attribution">Note: My website's background is a late Victorian pattern from William Morris and Co.</div>
+        </div>
+    </body>
+</html>

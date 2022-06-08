@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <style>
+            html {
+                font-family: "Palatino Linotype", Palatino, serif;
+            }
+            body {
+                background-image: url("lex.png");
+            }
+            h1 { 
+                margin: 0px;
+                font-family: 'Cinzel', serif;
+            }
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            .image { 
+                display: block;
+                padding: 4px;
+                float : center;
+                object-fit: contain;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+
+            .title {
+                text-align: center;
+                font-size: xx-large;
+            }
+            .subtitle {
+                text-align: center;
+                font-size: x-large;
+                font-family: 'Cinzel', serif;
+            }
+            .explanation {
+                text-align: center;
+            }
+            .rule {
+                text-align: center;
+                font-size: xx-large;
+                font-family: 'Cinzel', serif;
+            }
+            .corollary {
+                font-size: x-large;
+                font-family: 'Cinzel', serif;
+            }
+            .content { 
+                margin: auto; 
+                border: 1px solid black;
+                width: 80%;
+                padding: 40px;
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+        <title>Lex Lyubomiricus</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">
+                <h1>Lex Lyubomiricus</h1>
+            </div>
+
+            <p>Over the course of several research projects, I have come to develop a very simple doctrine for ensuring that our work remains on track and that we will be able to bring our results to publication. This really all amounts to a single principle, which my adviser Prof. Zach Tatlock jokingly dubbed "Lyubomirsky's Law." So as to be maximally pretentious, I have called it <em>lex Lyubomiricus</em> and it is this:</p>
+                        
+            <p><div class="rule">Keep your eyes on the prize.</div></p>
+
+            <p>The prize, in this case, is being able to publish a paper. In my view, the greatest obstacle is usually having <em>convincing</em> evaluation, which consists of an empirical demonstration of one's contributions that should persuade a skeptic that these contributions are, in fact, valuable. I am of the opinion that designing and performing experiments is generally more difficult and sensitive than the other tasks needed to bring a research paper to publication, such as describing the contributions or assembling the related work, though these are also essential.</p> 
+
+            <p>My reasoning for prioritizing the evaluation is simply that without the evaluation, there <em>cannot</em> be a defensible paper, whereas any written sections can at least be filled in perfunctorily and may still be able to be revised if the evaluation is convincing enough. (Of course, a badly written paper may be rejected precisely for being badly written, but that is a matter of degree.) Perhaps this is an entirely psychological barrier, but I am convinced that if the empirical foundations for a work have been established, the writing can be done much more quickly to support it; the evaluation is the crucial threshold to clear.</p>
+
+            <p>The rest of the "doctrine" of <em>lex Lyubomiricus</em> consists of corollaries of the above-listed principle (in no particular order):</p>
+            <div class="corollary">
+                <ol>
+                    <li>Finish the evaluation first.</li>
+                    <li>Begin by considering what would be the least amount of evaluation that you think you could reasonably submit for peer review. Do not worry about anything else until you have that.</li>
+                    <li>The "least" amount of evaluation is the simplest experiment that would tell you if your basic claims are wrong. If your initial hypothesis is wrong, it would be best to know that as soon as possible.</li>
+                    <li>Prioritize what is likeliest to give demonstrable results the soonest. If you fall behind schedule and the deadline is approaching, you can consider if the results you already have could justify a submission.</li>
+                    <li>Pick your target deadline based on how long it will take to perform the evaluation.</li>
+                    <li>Ensure you can describe how you obtained your results and what they mean. This will form the paper's evaluation section.</li>
+                    <li>When writing the paper, ensure all claims draw legitimacy from the evaluation.</li>
+                </ol>
+            </div>
+
+            <p>My experience is in doing work with an empirical component; the considerations are likely to be different for papers whose contributions are theoretical. I make no claims of originality, but I find I repeat myself often enough that it's worth writing it up. I welcome any feedback.</p>
+
+            <hr />
+            <div class="subtitle">
+                <h2>Panchekha's Principle</h2>
+            </div>
+
+            <p>My former colleague <a href="https://pavpanchekha.com/">Pavel Panchekha</a> has promoted a related principle for setting up systems evaluations, which I include here with his permission. Because research systems are constantly undergoing changes and may need to be redesigned as a project goes on, they are very prone to the accumulation of bugs. Suddenly finding that one's system breaks right before a paper deadline is always a very emotionally faught experience and can undermine a submission at the last minute. To guard against such a possibility, Prof. Panchekha proposes the following view:</p>
+
+            <p><div class="rule">You don't have eval unless it runs every night.</div></p>
+
+            <p>Namely, one should not consider the system evaluation to "work" until there is a "nightly" for it (a set of tests that runs automatically every night). Prof. Panchekha employed nightlies for his <a href="https://herbie.uwplse.org/">Herbie publications</a> and nightlies have been helpful for my own experiences with TVM Relay and DTR. Having a nightly run ensures that the most important code for the paper is constantly being exercised and alerts the group quickly to any serious errors; additionally, maintaining the infrastructure for the nightly has many benefits in terms of encouraging good software engineering practices and documenting important information for reproducibility. (For example, I have definitely found that having infrastructure like the <a href="https://github.com/uwsampl/relay-bench">Relay dashboard</a> has helped quickly add new experiments when necessary.)</p>
+
+            <p>Of course, it may not be possible or feasible to run one's entire project evaluation every night (there may be physical components involved or the computing resources necessary may cost too much or the full evaluation takes days to run), but one should take Panchekha's Principle as a guideline: Software components of the research should be frequently exercised to keep last-minute surprise bugs to a minimum, ideally with automatic tests. Additionally, with the increasing prevalence of artifact review, having the infrastructure for nightly runs helps tremendously for preparing artifacts; it is good to make that effort up front.</p>
+
+            <hr />
+
+            <div class="explanation">
+                <h2>Why write it up?</h2>
+            </div>
+
+            <p>Many of these principles may seem obvious and to follow directly from a schoolbook's description of the scentific method. I have found, though, that in computer systems research in particular, the distinction between designing and implementing the system itself and evaluating is often blurred. One can become consumed in implementing a system and adding features and even performing some sanity checks, but it will be unlikely to impress peer reviewers unless it can be adequately <em>evaluated</em> against its core claims, particularly in comparison to alternatives. Hence, we may consider another formulation of <em>lex Lyubomiricus</em>:</p>
+
+            <p><div class="rule">It doesn't "work" until it's been evaluated.</div></p>
+
+            <hr />
+
+            <div class="image"><img src="plaque.jpg" text="Lex Lyubomiricus carved in stone, courtesy of my adviser (taken in his office, with a view of the Allen Center). The phrases carved are are &quot;Design and complete the evaluation first,&quot; &quot;Nothing 'works' until it has been evaluated,&quot; and &quot;Claims draw legitimacy from their evaluation.&quot;" /></div>
+
+            <p>These laws have been carved in stone courtesy of my adviser. I have always joked that our research should be archived in stone, the best of all archival formats, and I am enormously grateful to Zach for actually doing it in the case of <em>lex Lyubomiricus</em>.</p>
+        </div>
+    </body>
+</html>
